@@ -43,13 +43,13 @@ public class FoodController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/name/{name}")
-    public void saveFood(@PathVariable String name) {
+    public void deleteByName(@PathVariable String name) {
         repository.deleteByName(name);
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/id/{id}")
-    public void saveFood(@PathVariable Long id) {
+    public void delete(@PathVariable Long id) {
         repository.deleteById(id);
     }
 
